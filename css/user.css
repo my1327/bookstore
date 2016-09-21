@@ -1,0 +1,69 @@
+/* CSS Document */
+/*整体定义*/
+body{
+   margin:0 auto;
+   padding:0;
+   font-size:15px;
+   font-family:"微软雅黑";
+   background-color:#FEF1FE;
+}
+/*兼容ie6*/
+*html .ie6_out{margin-left:800px;zoom:1}
+*html ie6_out{position:relative;float:left;margin-left:-800px;}
+
+
+a{
+  text-decoration:none;
+  color:#666666
+}
+input, ul, li, p, button, img, form, iframe,dl,dd,dt{
+   border:0;
+   list-style-type:none;
+   margin:0 auto;
+   padding:0;
+}
+.total{
+   width:1000px;
+   height:920px;
+   margin:auto;
+   background-color:#FFFFFF;
+}
+/*头部导航*/
+.top{
+   width:1000px;
+   height:30px;
+   margin:0 auto;
+   /*border-bottom:1px dotted #FFCCFF;*/
+}
+/*登陆导航条*/
+.fl{
+  width:1000px;
+  height:30px;
+  margin:0 auto;
+  float:left;
+  background-color:#F5F5F5;
+}
+.fl span{
+   padding-left:5px;
+   font-size:14px;
+   color:#D039E2;
+}
+/*购物车*/
+.fl .f1{
+  width:55px;
+  height:23px;
+  float:right;
+  margin-left:5px;
+  text-align:center;
+  border-left:1px solid #CCCCCC
+}
+/*登陆*/
+.fl .f2{
+  width:100px;
+  height:23px;
+  float:right;
+  text-align:center;
+  border-left:1px solid #CCCCCC;
+}
+
+

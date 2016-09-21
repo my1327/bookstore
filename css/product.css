@@ -1,0 +1,438 @@
+/* CSS Document */
+/*整体定义*/
+body{
+   margin:0 auto;
+   padding:0;
+   font-size:15px;
+   font-family:"微软雅黑";
+   background-color:#FEF1FE;
+}
+/*兼容ie6*/
+*html .ie6_out{margin-left:800px;zoom:1}
+*html ie6_out{position:relative;float:left;margin-left:-800px;}
+
+
+a{
+  text-decoration:none;
+  color:#666666
+}
+input, ul, li, p, button, img, form, iframe,dl,dd,dt{
+   border:0;
+   list-style-type:none;
+   margin:0 auto;
+   padding:0;
+}
+.total{
+   width:1000px;
+   height:920px;
+   margin:auto;
+   background-color:#FFFFFF;
+}
+/*头部导航*/
+.top{
+   width:1000px;
+   height:150px;
+   margin:0 auto;
+   border-bottom:1px dotted #FFCCFF;
+}
+/*登陆导航条*/
+.fl{
+  width:1000px;
+  height:30px;
+  margin:0 auto;
+  float:left;
+  background-color:#F5F5F5;
+}
+.fl span{
+   padding-left:5px;
+   font-size:14px;
+   color:#D039E2;
+}
+/*购物车*/
+.fl .f1{
+  width:55px;
+  height:23px;
+  float:right;
+  margin-left:5px;
+  text-align:center;
+  border-left:1px solid #CCCCCC
+}
+/*登陆*/
+.fl .f2{
+  width:100px;
+  height:23px;
+  float:right;
+  text-align:center;
+  border-left:1px solid #CCCCCC;
+}
+/*热搜logo板块*/
+.fl2{
+  width:1000px;
+  height:120px;
+  float:left;
+}
+/*logo*/
+.fl2 .logo{
+  width:400px;
+  height:120px;
+  float:left;
+  border-right:2px solid #F5F5F5;
+}
+/*热搜*/
+.fl2 .form{
+  width:500px;
+  height:120px;
+  float:right;
+  /*background-color:#FFFF99;*/
+  border-radius:10px;
+}
+.form .search-12{
+   width:500px;
+   height:50px;
+   text-align:center;
+   margin-top:30px;
+   float:left;
+/*   background-color:#6666FF;*/
+}
+/*登陆书目录*/
+.form .text{
+   width:400px;
+   height:45px;
+   border:2px solid #D039E2;
+}
+/*搜索按键*/
+.form .button{
+   width:60px;
+   height:45px;
+   border:2px solid #D039E2;
+   
+}
+/*热搜词样式*/
+.fl2 .search_bottom{
+   width:500px;
+   height:10px;
+   margin-left:20px;
+   float:left;
+}
+/*热搜词样式*/
+.search_bottom a{
+   font-size:14px;
+   margin-right:5px;
+}
+/*设置热搜词鼠标悬浮时样式*/
+.search_bottom a:hover{
+   text-decoration:underline;
+   color:#FFCC99;
+}
+
+/*正式部分*/
+/*导航部分*/
+.nav{
+   width:800px;
+   padding-left:10px;
+   height:40px;
+   float:left;
+   padding-bottom:8px;
+   line-height:40px;
+}
+.nav span{
+   color:#666666;
+}
+.nav .gt{
+   margin:1px 6px 0;
+}
+.nav a:hover{
+   text-decoration:underline;
+}
+/*商品简介部分*/
+.show{
+   width:1000px;
+   height:320px;
+   float:left;
+   border-bottom:1px solid #FCD6E2;
+}
+/*大图部分*/
+.imgs{
+   width:320px;
+   height:320px;
+   float:left;
+}
+/*大图容器样式*/
+.imgs .pic{
+   width:320px;
+   height:320px;
+   float:left;
+}
+/*大图样式*/
+.pic img{
+   width:320px;
+   height:320px;
+}
+
+/*图书销售*/
+.sale{
+   width:670px;
+   height:320px;
+   float:right;
+   margin:0;
+   padding:0;
+   /*background-color:#0066FF;*/
+}
+
+.sale_box{
+   width:670px;
+   height:78px;
+   float:left;
+   font-family:"微软雅黑";
+   border-bottom:1px dotted #CCCCCC;
+}
+/*简介样式*/
+.sale_box h1{
+   font-size:18px;
+   float:left;
+   max-height:48px;
+   line-height:24px;
+   overflow:hidden;
+   margin:0 auto;
+}
+.sale_box h2{
+   padding-top:6px;
+   font-size:16px;
+   font-weight:normal;
+   float:left;
+   display:block;
+   line-height:24px;
+   margin:0 auto;
+}
+/*图书作者出版社样式*/
+.sale_info{
+   width:670px;
+   height:25px;
+   float:left;
+   margin-top:5px;
+}
+/*作者 出版社 出版时间*/
+.sale_info .t1{
+   margin-right:25px;
+   font-size:16px;
+}
+.t1 a{
+   color:#0066FF;
+}
+.t1 a:hover{
+   text-decoration:underline;
+}
+/*价格样式*/
+.price_box{
+    width:670px;
+	height:61px;
+	float:left;
+	background-color:#CCCCCC;
+	margin-top:5px;
+}
+/*定价样式*/
+.price{
+    width:670px;
+	height:28px;
+	float:left;
+	margin-bottom:5px;
+}
+/*价格板块定价抢购价样式*/
+.left{
+    width:68px;
+	height:28px;
+	line-height:28px;
+	font-size:14px;
+	color:#999999;
+	float:left;
+	white-space:nowrap;
+}
+.letter1{
+    letter-spacing:25px;
+}
+/*价格板块价格样式*/
+.right{
+    width:600px;
+	margin-left:2px;
+	height:24px;
+	float:left;
+}
+.right .price_a{
+    text-decoration:line-through;
+	font-size:14px;
+	color:#999999;
+	line-height:28px;
+}
+/*抢购价样式*/
+.price_new{
+    width:670px;
+	height:28px;
+	float:left;
+}
+.letter2{
+     letter-spacing:5px;
+}
+.right .price_b{
+     font-size:22px;
+	 color:#FF0000;
+	 height:28px;
+	 line-height:28px;
+}
+/*购买板块*/
+/*购买数量*/
+.buy{
+     wigth:670px;
+	 height:39px;
+	 margin-top:100px;
+	 float:left;
+}
+.buy_box{
+     width:63px;
+	 height:36px;
+	 float:left;
+	 border:1px solid #CCCCCC;
+}
+.buy_box .text{
+     font-size:16px;
+	 line-height:36px;
+	 width:38px;
+	 height:32px;
+	 float:left;
+	 text-align:center;
+}
+.buy_box .num_add,.buy_box .num_del{
+     width:23px;
+	 display:block;
+	 height:17px;
+	 background-color:#999999;
+	 cursor:pointer;
+	 float:left;
+	 margin-left:2px;
+}
+.buy_box .num_add{
+	 background-image:url(../image/num_add.jpg);
+	 background-repeat:no-repeat;
+}
+
+.buy_box .num_del{
+     margin-top:2px;
+	 background-image:url(../image/num_del.jpg);
+	 background-repeat:no-repeat;
+}
+/*btn样式*/
+.btn{
+     width:600px;
+	 height:39px;
+	 float:left;
+	 display:block;
+}
+.btn input{
+     margin-left:20px;
+	 cursor:pointer;
+}
+.btn .cart_buy{
+     width:134px;
+	 height:36px;
+	 background-color:#ff2832;
+	 float:left;
+	 color:#FFFFFF;
+	 border-radius:3px;
+}
+.btn .btn_buy{
+     width:96px;
+	 height:36px;
+	 border:1px solid #ff2832;
+	 background-color:#FAC5D2;
+	 color:#ff2832;
+	 border-radius:3px;
+}
+/*商品详情*/
+.t_box{
+     width:1000px;
+	 height:340px;
+	 float:left;
+	 margin-top:5px;
+}
+.t_box1{
+     width:990px;
+	 height:150px;
+	 margin:0 auto;
+	 border-bottom:1px solid #FCC7D6;
+}
+.t_box1 .pro_xq{
+     width:990px;
+	 height:30px;
+	 line-height:30px;
+	 color:#ff2832;
+	 float:left;
+	 font-size:18px;
+	 /*border-bottom:1px solid #FCCFE2;*/
+}
+.t_box1 .pro_xq1{
+     width:990px;
+	 height:110px;
+	 float:left;
+	 font-size:14px;
+}
+.t_box1 li{
+     width:320px;
+	 margin-right:10px;
+	 float:left;
+	 margin-top:8px;
+}
+/*图书目录*/
+.pro_menu{
+    width:990px;
+	height:180px;
+	float:left;
+	margin-left:5px;
+	margin-top:5px;
+   /* border-bottom:1px solid #FBC1D7;*/
+}
+.pro_menu .menu_ml{
+    width:990px;
+	height:30px;
+	font-size:18px;
+	line-height:30px;
+	color:#ff2832;
+}
+.pro_menu .menu_box{
+    width:990px;
+	height:145px;
+	float:left;
+	margin-top:5px;
+	border-bottom:1px solid #FBC1D7;
+}
+.menu_box .xy{
+    font-size:14px;
+	height:15px;
+	line-height:15px;
+}
+.menu_box li{
+     width:310px;
+	 margin-left:10px;
+	 float:left;
+	 margin-top:10px;
+}
+/*页脚部分*/
+.links{
+  width:990px;;
+  height:40px;
+  float:left;
+  font-size:14px;
+  padding-top:5px;
+}
+.links ul{
+   text-align:center;
+   padding:0;
+}
+.links li{
+   display:inline;
+   padding-right:10px;
+}
+.links li a:hover{
+   color:#FF9999;
+}
+.links p{
+   text-align:center;
+}

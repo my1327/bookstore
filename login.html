@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>登录-清至书屋</title>
+<style>
+body{background-color:#FFF2F4;padding:0;margin:0;background:url(image/121.jpg);background-size: cover;}
+.logo{width:400px;height:120px;margin:0 auto;}
+.total{width:400px;height:300px;;margin:0 auto;background-color:#F3F3F3;padding-top:20px;background:rgba(255,255,255,0.4);border-radius:10px;}
+.login{width:400px;height:300px;margin:0 auto;padding-top:5px;}
+.log{width:255px;height:30px;margin-top:20px;float:left;border-radius:3px;border:1px solid #CDFAF7;cursor:pointer;}
+.login-table{width:300px;height:180px;margin:0 auto;}
+.btn{width:255px;height:30px;margin-left:52px;margin-top:20px;float:left;border-radius:3px;
+border:1px solid #CDFAF7;cursor:pointer;}
+</style>
+<script type="text/javascript">
+    function login1(){
+	    window.location.href="./log.html";
+	}
+</script>
+</head>
+
+<body>
+   <div class="logo"><a href="./index.html"><img src="./image/logo-1.png"></a></div>
+   <div class="total">      
+		  <div class="login">		      
+		      <div class="login-table"><table>
+			     <tr style="height:60px;"><td>用户名：</td><td><input type='text' class="user" style="width:180px;height:25px;"></td></tr>
+				 <tr style="height:60px;"><td>密&nbsp;&nbsp;&nbsp;码：</td><td><input type='password' class="pass1" style="width:180px;height:25px;"></td></tr>
+				 <th colspan="2" style="height:60px;"><input type="button" value="登    录" class="log"></tr>
+			 </table></div> 
+			 <input type="button" onclick="login1()" class="btn" value="立即注册">
+		  </div>
+	</div>
+</body>
+</html>

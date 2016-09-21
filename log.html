@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style>
+   body{padding:0;margin:0 auto;font-size:20px;font-family:"微软雅黑";background:url(image/122.jpg);background-size:cover;}
+   .logo{width:400px;height:120px;margin:0 auto;}
+   .total{width:500px;height:350px;;margin:0 auto;background-color:#F3F3F3;padding-top:20px;background:rgba(255,255,255,0.4);border-radius:10px;}
+   input{border:1px solid #FFCC66;width:200px;height:30px;}
+   .user{width:310px;height:50px;margin-bottom:20px;margin:0 auto;}
+   .pass,.pass1,.em,.tel,.ad,.btn{width:310px;height:50px;margin-bottom:20px;margin:0 auto;}
+   #username,#pass,#pass1,#email,#tel,#add{margin-left:5px;}
+   #btn1{width:80px;float:left;border-radius:5px;cursor:pointer;}
+   #btn2{width:80px;margin-left:120px;border-radius:5px;cursor:pointer;}
+</style>
+<script type="text/Javascript">
+   window.onload=function(){
+       var pass=document.getElementById('pass');
+	   var pass1=document.getElementById('pass1');
+	   var btn1=document.getElementById('btn1');
+	   var btn2=document.getElementById('btn2');
+	   
+	   var value1=pass.innerHTML;
+	   var value2=pass1.innerHTML;
+	   
+	   if(btn1.value!=btn2.value){
+	       // window.alert("两次密码不同，请重新输入");
+			//btn2.value="";
+	   }
+	   else{
+	         
+	   }
+	   
+   }
+</script>
+<title>注册-清至书屋</title>
+</head>
+
+<body>
+  <div class="logo"><a href="index.html"><img src="./image/logo-1.png"></a></div>
+  <div class="total">
+    <div class="user"><label>用&nbsp;&nbsp;户&nbsp;&nbsp;名:</label><input id="username" name="username" type="text"/></div>
+    <div class="pass"><label>登录密码:</label><input id="pass" name="password" type="password"/></div>
+	<div class="pass1"><label>确认密码:</label><input id="pass1" name="password1" type="password"/></div>
+    <div class="em"><label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</label><input id="email" name="email" data-ideal="required email" type="email"/></div>
+	<div class="tel"><label>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话:</label><input type="tel" id="tel" name="phone"/></div>
+	<div class="ad"><label>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址:</label><input type="text" id="add" name="address"/></div>
+	<div class="btn"><input type="button" id="btn1"value="注册"><input type="reset" id="btn2" value="重置"></div>
+  </div>
+</body>
+</html>

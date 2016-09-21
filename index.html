@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+
+		<title>主页-清至书屋</title>
+	</head>
+
+	<body ng-app="myApp">
+		<!--兼容ie5-->
+		<!--[if lte IE 5]>
+<div class="ie6_out">
+<div class="ie6_in">
+<![endif]-->
+
+		<!--整体div-->
+		<div class="total"  ng-controller="booklist">
+			<!--头部导航-->
+			<div class="top">
+				<!--登陆导航条-->
+				<div class="fl">
+					<span>欢迎您来到：</span>
+					<div class="f1">
+						<a href="buy1">购物车</a>
+					</div>
+					<div class="f2">
+						<a href="login.html">你好，请登录</a>
+					</div>
+				</div>
+				<!--logo 导航-->
+				<div class="fl2">
+					<!--logo-->
+					<div class="logo"><img src="./image/logo-2.png"></div>
+					<!--搜索部分-->
+					<div class="form">
+						<!--搜索框部分-->
+						<div class="search-12">
+							<form id="search_new">
+								<!--搜索框-->
+								<input type="text" id="key" class="text">
+								<!--搜索按钮-->
+								<input type="button" class="button" onclick="javascript:;" value="搜索">
+							</form>
+						</div>
+						<!--热搜部分-->
+						<div class="search_bottom">
+							<!--热搜词-->
+							<div class="search_hot">
+								<a style="margin-right:0" target="_blank" href="#">热搜</a>
+								<a target="_blank" name="hotword" href="#">何以笙箫默</a>
+								<a target="_blank" name="hotword" href="#">二手时间</a>
+								<a target="_blank" name="hotword" href="#">向着光亮那方</a>
+								<a target="_blank" name="hotword" href="#">平凡的世界</a>
+								<a target="_blank" name="hotword" href="#">鬼吹灯</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--主体部分-->
+			<div class="body1">
+				<!--左部导航-->
+				<div class="item">
+					<div class="item1">
+						<!--左侧导航部分-->
+						<div class="tip">图书分类</div>
+						<!--教育导航-->
+						<div class="con">
+							<h3 class="mu_head current" ng-repeat="x in typelist">{{x.typeBig}}</h3>
+							<div class="menu" style="display:block;">
+								<ul>
+									<li ng-repeat="x in typeSmall">
+										<a ng-href={{x.href}}>{{x.name}}</a>
+									</li>
+									<li>
+										<a href='#'>初中</a>
+									</li>
+									<li>
+										<a href='#'>高中</a>
+									</li>
+									<li>
+										<a href='#'>本科</a>
+									</li>
+									<li>
+										<a href='#'>专科</a>
+									</li>
+									<li>
+										<a href='#'>成人教育</a>
+									</li>
+									<li>
+										<a href='#'>学历考试</a>
+									</li>
+									<li>
+										<a href='#'>公职</a>
+									</li>
+									<li>
+										<a href='#'>建筑工程</a>
+									</li>
+									<li>
+										<a href='#'>考研</a>
+									</li>
+									<li>
+										<a href='#'>英语综合</a>
+									</li>
+									<li>
+										<a href='#'>英语口语</a>
+									</li>
+									<li>
+										<a href='#'>CET-4</a>
+									</li>
+									<li>
+										<a href='#'>CET-6</a>
+									</li>
+									<li>
+										<a href='#'>专四/专八</a>
+									</li>
+									<li>
+										<a href='#'>小语种</a>
+									</li>
+									<li>
+										<a href='#'>更多</a>
+									</li>
+								</ul>
+							</div>
+							<!--青春导航-->
+							<h3 class="mu_head">青春</h3>
+							<div class="menu" style="display:none;">
+								<ul>
+									<li>
+										<a href='#'>校园</a>
+									</li>
+									<li>
+										<a href='#'>爱情/情感</a>
+									</li>
+									<li>
+										<a href='#'>叛逆/成长</a>
+									</li>
+									<li>
+										<a href='#'>悬疑/惊悚</a>
+									</li>
+									<li>
+										<a href='#'>娱乐/偶像</a>
+									</li>
+									<li>
+										<a href='#'>大陆原创</a>
+									</li>
+									<li>
+										<a href='#'>影视写真</a>
+									</li>
+									<li>
+										<a href='#'>穿越</a>
+									</li>
+									<li>
+										<a href='#'>古代言情</a>
+									</li>
+									<li>
+										<a href='#'>大陆漫画</a>
+									</li>
+									<li>
+										<a href='#'>日韩漫画</a>
+									</li>
+									<li>
+										<a href='#'>轻小说</a>
+									</li>
+									<li>
+										<a href='#'>游戏同人</a>
+									</li>
+									<li>
+										<a href='#'>更多</a>
+									</li>
+								</ul>
+							</div>
+							<!--文艺导航-->
+							<h3 class="mu_head">文艺</h3>
+							<div class="menu" style="display:none;">
+								<ul>
+									<li>
+										<a href='#'>文集</a>
+									</li>
+									<li>
+										<a href='#'>中国古诗词</a>
+									</li>
+									<li>
+										<a href='#'>中国现当代诗</a>
+									</li>
+									<li>
+										<a href='#'>民间文学</a>
+									</li>
+									<li>
+										<a href='#'>专科</a>
+									</li>
+									<li>
+										<a href='#'>财经人物</a>
+									</li>
+									<li>
+										<a href='#'>历代帝王</a>
+									</li>
+									<li>
+										<a href='#'>哲学家</a>
+									</li>
+									<li>
+										<a href='#'>艺术理论</a>
+									</li>
+									<li>
+										<a href='#'>民间艺术</a>
+									</li>
+									<li>
+										<a href='#'>摄影教程</a>
+									</li>
+									<li>
+										<a href='#'>后期处理</a>
+									</li>
+									<li>
+										<a href='#'>更多</a>
+									</li>
+								</ul>
+							</div>
+							<!--童书导航-->
+							<h3 class="mu_head">童书</h3>
+							<div class="menu" style="display:none;">
+								<ul>
+									<li>
+										<a href='#'>0-2岁</a>
+									</li>
+									<li>
+										<a href='#'>3-6岁</a>
+									</li>
+									<li>
+										<a href='#'>7-20岁</a>
+									</li>
+									<li>
+										<a href='#'>中国儿童文学</a>
+									</li>
+									<li>
+										<a href='#'>外国儿童文学</a>
+									</li>
+									<li>
+										<a href='#'>图画书</a>
+									</li>
+									<li>
+										<a href='#'>百科</a>
+									</li>
+									<li>
+										<a href='#'>婴儿读物</a>
+									</li>
+									<li>
+										<a href='#'>幼儿启蒙</a>
+									</li>
+									<li>
+										<a href='#'>益智游戏</a>
+									</li>
+									<li>
+										<a href='#'>少儿期刊</a>
+									</li>
+									<li>
+										<a href='#'>少儿英语</a>
+									</li>
+									<li>
+										<a href='#'>更多</a>
+									</li>
+								</ul>
+							</div>
+							<!--科技导航-->
+							<h3 class="mu_head">科技</h3>
+							<div class="menu" style="display:none;">
+								<ul>
+									<li>
+										<a href='#'>人类故事</a>
+									</li>
+									<li>
+										<a href='#'>生态环境</a>
+									</li>
+									<li>
+										<a href='#'>建筑科学</a>
+									</li>
+									<li>
+										<a href='#'>医技学</a>
+									</li>
+									<li>
+										<a href='#'>中药</a>
+									</li>
+									<li>
+										<a href='#'>医学</a>
+									</li>
+									<li>
+										<a href='#'>计算机理论</a>
+									</li>
+									<li>
+										<a href='#'>数据库</a>
+									</li>
+									<li>
+										<a href='#'>电脑杂志</a>
+									</li>
+									<li>
+										<a href='#'>农林工程</a>
+									</li>
+									<li>
+										<a href='#'>园艺</a>
+									</li>
+									<li>
+										<a href='#'>林业</a>
+									</li>
+									<li>
+										<a href='#'>力学</a>
+									</li>
+									<li>
+										<a href='#'>天文学</a>
+									</li>
+									<li>
+										<a href='#'>更多</a>
+									</li>
+								</ul>
+							</div>
+							<!--人文社科导航-->
+							<h3 class="mu_head">人文社科</h3>
+							<div class="menu" style="display:none;">
+								<ul>
+									<li>
+										<a href='#'>中国史</a>
+									</li>
+									<li>
+										<a href='#'>世界史</a>
+									</li>
+									<li>
+										<a href='#'>中国文化</a>
+									</li>
+									<li>
+										<a href='#'>各国文化</a>
+									</li>
+									<li>
+										<a href='#'>经部</a>
+									</li>
+									<li>
+										<a href='#'>子部</a>
+									</li>
+									<li>
+										<a href='#'>集部</a>
+									</li>
+									<li>
+										<a href='#'>心理百科</a>
+									</li>
+									<li>
+										<a href='#'>古代哲学</a>
+									</li>
+									<li>
+										<a href='#'>哲学史</a>
+									</li>
+									<li>
+										<a href='#'>军事史</a>
+									</li>
+									<li>
+										<a href='#'>社会学</a>
+									</li>
+									<li>
+										<a href='#'>语言文学</a>
+									</li>
+									<li>
+										<a href='#'>心理学</a>
+									</li>
+									<li>
+										<a href='#'>社会科学</a>
+									</li>
+									<li>
+										<a href='#'>更多</a>
+									</li>
+								</ul>
+							</div>
+							<a href="#"><span class="more" onclick="">更多</span></a>
+							<!--分类导航末尾图片-->
+							<div class="last"><img src="./image/last.jpg"></div>
+						</div>
+					</div>
+				</div>
+				<!--主要内容部分-->
+				<div class="product">
+					<!--内容-->
+					<div class="product1">
+						<!--轮播图部分-->
+						<div class="imgRun" id="imgRun">
+							<ul>
+								<li><img src="./image/1.jpg"></li>
+								<li><img src="./image/2.jpg"></li>
+								<li><img src="./image/3.jpg"></li>
+							</ul>
+							<div class="btn" id="btn">
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;"></a>
+								<a href="javascript:;"></a>
+							</div>
+						</div>
+						<!--产品部分-->
+						<div class="pro">
+							<span class="newBooks">新书上架</span>
+							<div class="pro1">
+								<ul class="list">
+									<li ng-repeat="x in booklist">
+										<a ng-href={{x.src}} title={{x.title}}><!--"./product.html" "光阴似水 待你如初"-->
+											<img src={{x.img}}><!--"./image/book-1.jpg"-->
+										</a>
+										<p class="name">
+											<a title={{x.title}} href="#" target="_blank">{{x.title}}</a><!--光阴似水&nbsp;待你如初-->
+										</p>
+										<p class="author">
+											<span class="author_t">{{x.author}}</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+							       <span class="sign">￥</span>
+											<span class="num">{{x.nprice}}</span>
+											</span>
+											<span class="price_t">
+							       <span class="sign">￥</span>
+											<span class="num">{{x.oprice}}</span>
+											</span>
+										</p>
+									</li>
+									<!--<li>
+										<a href="#" title="孤独小说家">
+											<img src="./image/book-2.jpg">
+										</a>
+										<p class="name">
+											<a title="孤独小说家" href="#" target="_blank">孤独小说家</a>
+										</p>
+										<p class="author">
+											<span class="author_t">（日）石田衣良</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+						       <span class="sign">￥</span>
+											<span class="num">24</span>
+											<span class="tail">.80</span>
+											</span>
+											<span class="price_t">
+						       <span class="sign">￥</span>
+											<span class="num">35</span>
+											<span class="tail">.00</span>
+											</span>
+										</p>
+									</li>
+									<li>
+										<a href="#" title="在最深的红尘里重逢：仓央嘉措诗传">
+											<img src="./image/book-3.jpg">
+										</a>
+										<p class="name">
+											<a title="在最深的红尘里重逢：仓央嘉措诗传" href="#" target="_blank">在最深的红尘里重逢：仓央嘉措诗传</a>
+										</p>
+										<p class="author">
+											<span class="author_t">白落梅</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+						       <span class="sign">￥</span>
+											<span class="num">21</span>
+											<span class="tail">.40</span>
+											</span>
+											<span class="price_t">
+						       <span class="sign">￥</span>
+											<span class="num">35</span>
+											<span class="tail">.00</span>
+											</span>
+										</p>
+									</li>
+									<li>
+										<a href="#" title="我们都是和自己赛跑的人">
+											<img src="./image/book-4.jpg">
+										</a>
+										<p class="name">
+											<a title="我们都是和自己赛跑的人" href="#" target="_blank">我们都是和自己赛跑的人</a>
+										</p>
+										<p class="author">
+											<span class="author_t">另维</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+						       <span class="sign">￥</span>
+											<span class="num">29</span>
+											<span class="tail">.40</span>
+											</span>
+											<span class="price_t">
+						       <span class="sign">￥</span>
+											<span class="num">42</span>
+											<span class="tail">.00</span>
+											</span>
+										</p>
+									</li>
+									<li>
+										<a href="#" title="温家宝地质笔记">
+											<img src="./image/book-5.jpg">
+										</a>
+										<p class="name">
+											<a title="温家宝地质笔记" href="#" target="_blank">温家宝地质笔记</a>
+										</p>
+										<p class="author">
+											<span class="author_t">温家宝&nbsp;著</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+						       <span class="sign">￥</span>
+											<span class="num">68</span>
+											<span class="tail">.80</span>
+											</span>
+											<span class="price_t">
+						       <span class="sign">￥</span>
+											<span class="num">85</span>
+											<span class="tail">.00</span>
+											</span>
+										</p>
+									</li>
+									<li>
+										<a href="#" title="疯狂动物城">
+											<img src="./image/book-6.jpg">
+										</a>
+										<p class="name">
+											<a title="疯狂动物城" href="#" target="_blank">疯狂动物城</a>
+										</p>
+										<p class="author">
+											<span class="author_t">美国迪士尼公司</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+						       <span class="sign">￥</span>
+											<span class="num">22</span>
+											<span class="tail">.40</span>
+											</span>
+											<span class="price_t">
+						       <span class="sign">￥</span>
+											<span class="num">32</span>
+											<span class="tail">.00</span>
+											</span>
+										</p>
+									</li>
+									<li>
+										<a href="#" title="情景认知小百科">
+											<img src="./image/book-7.jpg">
+										</a>
+										<p class="name">
+											<a title="情景认知小百科" href="#" target="_blank">情景认知小百科</a>
+										</p>
+										<p class="author">
+											<span class="author_t">(法)埃尔莎・富基</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+						       <span class="sign">￥</span>
+											<span class="num">42</span>
+											<span class="tail">.50</span>
+											</span>
+											<span class="price_t">
+						       <span class="sign">￥</span>
+											<span class="num">85</span>
+											<span class="tail">.00</span>
+											</span>
+										</p>
+									</li>
+									<li>
+										<a href="#" title="人生智慧：如何幸福度过一生">
+											<img src="./image/book-8.jpg">
+										</a>
+										<p class="name">
+											<a title="人生智慧：如何幸福度过一生" href="#" target="_blank">人生智慧：如何幸福度过一生</a>
+										</p>
+										<p class="author">
+											<span class="author_t">(德)阿图尔・叔本华</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+						       <span class="sign">￥</span>
+											<span class="num">29</span>
+											<span class="tail">.99</span>
+											</span>
+											<span class="price_t">
+						       <span class="sign">￥</span>
+											<span class="num">39</span>
+											<span class="tail">.00</span>
+											</span>
+										</p>
+									</li>
+									<li>
+										<a href="#" title="就要一场绚丽突围30岁后去留学">
+											<img src="./image/book-9.jpg">
+										</a>
+										<p class="name">
+											<a title="就要一场绚丽突围30岁后去留学" href="#" target="_blank">就要一场绚丽突围30岁后去留学</a>
+										</p>
+										<p class="author">
+											<span class="author_t">范海涛</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+						       <span class="sign">￥</span>
+											<span class="num">31</span>
+											<span class="tail">.50</span>
+											</span>
+											<span class="price_t">
+						       <span class="sign">￥</span>
+											<span class="num">42</span>
+											<span class="tail">.00</span>
+											</span>
+										</p>
+									</li>
+									<li>
+										<a href="#" title="刹那星光">
+											<img src="./image/book-10.jpg">
+										</a>
+										<p class="name">
+											<a title="刹那星光" href="#" target="_blank">刹那星光</a>
+										</p>
+										<p class="author">
+											<span class="author_t">明月�</span>
+										</p>
+										<p class="price">
+											<span class="rob">
+						       <span class="sign">￥</span>
+											<span class="num">20</span>
+											<span class="tail">.20</span>
+											</span>
+											<span class="price_t">
+						       <span class="sign">￥</span>
+											<span class="num">26</span>
+											<span class="tail">.80</span>
+											</span>
+										</p>
+									</li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--尾部链接部分-->
+			<div class="links">
+				<ul>
+					<li>
+						<a href="#">Archiver</a>
+					</li>
+					<li>
+						<a href="#">清至书屋</a>
+					</li>
+					<li>
+						<a href="#">关于清至书屋</a>
+					</li>
+					<li class="no-border">
+						<a href="#">站长统计</li>
+				</ul>
+				<p> 版权所有：
+					<a href='#'>清至书屋</a>　 Powered by
+					<a href='#'>Discuz!</a> X2.5 ? 2014-2016
+					<a href='#'>Comsenz Inc</a>.</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="./js/move1.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/angular-1.4.6.js"></script>
+	
+	<script type="text/javascript">
+		var app = angular.module("myApp",[]);
+		
+		app.controller("booklist",function($scope){
+			$scope.typelist = [
+			{typeBig:"教育"},
+			]
+			
+			$scope.typeSmall = [
+			
+			]
+			$scope.booklist = [
+			{src:"./product.html",title:"光阴似水  待你如初",img:"./image/book-1.jpg",author:"白落梅",nprice:"27.40",oprice:"38.00"},
+			{src:"./product.html",title:"孤独小说家",img:"./image/book-2.jpg",author:"(日)石田衣良",nprice:"27.40",oprice:"38.00"},
+			{src:"./product.html",title:"在最深的红尘里重逢：仓央嘉措诗传",img:"./image/book-3.jpg",author:"白落梅",nprice:"27.40",oprice:"38.00"},
+			{src:"./product.html",title:"我们是和自己赛跑的人",img:"./image/book-4.jpg",author:"另维",nprice:"27.40",oprice:"38.00"},
+			{src:"./product.html",title:"温家宝地质笔记",img:"./image/book-5.jpg",author:"温家宝 著",nprice:"27.40",oprice:"38.00"},
+			{src:"./product.html",title:"疯狂动物城",img:"./image/book-6.jpg",author:"美国迪士尼公司",nprice:"27.40",oprice:"38.00"},
+			{src:"./product.html",title:"情景认知小百科",img:"./image/book-7.jpg",author:"(法)埃尔莎·富基",nprice:"27.40",oprice:"38.00"},
+			{src:"./product.html",title:"人生智慧：如何幸福度过一生",img:"./image/book-8.jpg",author:"(德)阿图尔·叔本华",nprice:"27.40",oprice:"38.00"},
+			{src:"./product.html",title:"就要一场绚丽突围30岁后留学",img:"./image/book-9.jpg",author:"范海涛",nprice:"27.40",oprice:"38.00"},
+			{src:"./product.html",title:"刹那星光",img:"./image/book-10.jpg",author:"明月珰",nprice:"27.40",oprice:"38.00"},
+			]
+		});
+		
+		
+		$(document).ready(function() {
+			$(".con .menu:eq(0)").show();
+			$(".con h3.mu_head").click(function() {
+				//寻找点击h3下的div并使其高度改变
+				$(this).addClass("current").next("div.menu").slideToggle(75).siblings("div.menu").slideUp("1000");
+				//移除所点击h3兄弟节点的current样式
+				$(this).siblings().removeClass("current");
+			});
+			$(".con2 .menu:eq(0)").show();
+			$(".con2 h3.menu_head").mouseover(function() {
+				//寻找点击h3下的div并使其高度改变
+				$(this).addClass("current").next("div.menu").slideDown(105).siblings("div.menu").slideUp("1000");
+				//移除所点击h3兄弟节点的current样式
+				$(this).siblings().removeClass("current");
+			});
+		});
+	</script>
+
+</html>

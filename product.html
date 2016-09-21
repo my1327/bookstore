@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/product.css">
+<script type="text/javascript">
+    var text=document.getElementById("text");
+	var add=document.getElementById("num_add");
+	var del=document.getElementById("num_del");
+	var num=parsetInt(text.value);
+    function change(){
+       	add.onclick=function add(){
+		    num++;
+		}
+		del.onclick=function del(){
+		    num--;
+		}
+	}
+</script>
+<title>光阴似水-待你如初</title>
+</head>
+
+<body>
+
+  <!--整体div-->
+  <div class="total">
+     <!--头部导航-->
+     <div class="top">
+	    <!--登陆导航条-->
+	    <div class="fl">
+		    <span>欢迎您来到：</span>
+		    <div class="f1"><a href="buy1">购物车</a></div>
+		    <div class="f2"><a href="login.html">你好，请登录</a></div>
+		</div>
+		<!--logo 导航-->
+		<div class="fl2">
+		    <!--logo-->
+		    <div class="logo"><img src="./image/logo-2.png"></div>
+			<!--搜索部分-->
+			<div class="form">
+                 <!--搜索框部分-->
+			     <div class="search-12">
+				    <form id="search_new">
+					   <!--搜索框-->
+			           <input type="text" id="key" class="text">
+					   <!--搜索按钮-->
+					   <input type="button" class="button" onclick="javascript:;"  value="搜索">
+					</form>
+			     </div>
+				 <!--热搜部分-->
+				 <div class="search_bottom">
+				      <!--热搜词-->
+				      <div class="search_hot">
+					      <a style="margin-right:0" target="_blank" href="#">热搜</a>
+						  <a target="_blank" name="hotword" href="#">何以笙箫默</a>
+						  <a target="_blank" name="hotword" href="#">二手时间</a>
+						  <a target="_blank" name="hotword" href="#">向着光亮那方</a>
+						  <a target="_blank" name="hotword" href="#">平凡的世界</a>
+						  <a target="_blank" name="hotword" href="#">鬼吹灯</a>
+					  </div>
+				 </div>
+			</div>
+		</div>	
+	 </div>
+	 <!--主体部分-->
+	 <!--导航条-->
+	 <div class="nav">
+	     <a href="index.html">传记</a>
+		 <span class="gt">></span>
+		 <a href="index.html">文学家</a>
+		 <span class="gt">></span>
+		 <span>光阴似水&nbsp;待你如初</span>		 
+	 </div>
+	 <!--图书销售-->
+	 <div class="show">
+	    <!--图书图片-->
+	    <div class="imgs">
+		  <div class="pic"><img src="./image/QZ100001.jpg"></div>
+		</div>
+		<!--图书详细begin-->
+		<div class="sale">
+		   <!--图书简介板块begin-->
+		   <div class="sale_box">
+		     <h1 title="光阴似水 待你如初">光阴似水 待你如初</h1> 
+			 <h2 title="隐世才女白落梅民国才女传记终结之作，前半生灿烂绚丽，后半生素雅恬淡，只为活出一个真我">隐世才女白落梅民国才女传记终结之作，前半生灿烂绚丽，后半生素雅恬淡，只为活出一个真我</h2>
+		   </div>
+		   <!--图书价格板块end-->
+		   <!--作者出版社-->
+		   <div class="sale_info">
+		     <span class="t1">作者：<a href="http://baike.baidu.com/link?url=MiW3E4UBn2-P87BRq_yilDVHk2k3o_g94AYGSOoUWq-u5G5scJgn0CKTsy193YnDE4UvQt5oOJ5h5r-qt3zzwa">白落梅</a></span>
+			 <span class="t1">出版社：<a href="http://baike.baidu.com/link?url=TIf10djeOKcyJegaoQ_5643Si1Yn0iuwZMEbf1zwwo2cSM5KwQ_YNcoDH35W-OFyIHkID5yOnroqxO2hQJPPOa">中国华侨出版社</a></span>
+			 <span class="t1">出版时间：2016年3月</span>
+		   </div>
+		   <!--图书价格板块begin-->
+		   <div class="price_box">
+		      <div class="price">
+			    <div class="left letter1">定价</div>
+				<div class="right"><span class="price_a">￥38.00</span></div>
+			  </div>
+			  <div class="price_new">
+			    <div class="left letter2">抢购价</div>
+				<div class="right"><span class="price_b">￥19.00</span></div>
+			  </div>
+		   <!--图书价格板块end-->
+		   </div>
+		   <!--购买板块-->
+		  <div class="buy">
+		     <div class="buy_box">
+			    <input type="text" value="1" class="text" id="text">
+				<a href="javascript:void();" class="num_add" id="num_add"></a>
+				<a href="javascript:void();" class="num_del" id="num_del"></a>				
+			 </div>
+			 <div class="btn">
+			    <input type="button" class="cart_buy" value="加入购物车">
+				<input type="button" class="btn_buy" value="一键购买">
+			 </div>
+		  </div>
+		</div>
+		<!--图书详细板块end-->
+		<!--图书详情begin-->
+		<div class="t_box">
+		   <div class="t_box1">
+		      <span class="pro_xq">商品详情</span>
+			  <div class="pro_xq1"><ul>
+			     <li>版 次：1</li>
+				 <li>页 数：256</li>
+				 <li>字 数：150000</li>
+				 <li>印刷时间：</li>
+				 <li>开 本：32开</li>
+				 <li>纸 张：胶版纸</li>
+				 <li>印 次：1</li>
+				 <li>包 装：平装</li>
+				 <li>丛书名：</li>
+				 <li>国际标准书号ISBN：9787511360076</li>
+				 <li>所属分类：图书>传记>文学家></li>
+			  </ul></div>
+		   </div>
+		   <!--图书目录begin-->
+		   <div class="pro_menu">
+		      <span class="menu_ml">目录</span>
+			  <div class="menu_box">
+			    <span class="xy">序言：花落不沾衣</span>
+		        <ul>
+                <li>第一章　时光惊雪</li>
+                <li>第二章　人世修行</li>
+                <li>第三章　倾倒众生</li>
+                <li>第四章　惊艳时光</li>
+                <li>第五章　错误花开</li>
+                <li>第六章　漫漫尘烟</li>
+                <li>第七章　民国才子</li>
+                <li>第八章　金风玉露</li>
+                <li>第九章　情场风云</li>
+                <li>第十章　焚诗取暖</li>
+                <li>第十一章  聚散依依</li>
+                <li>第十二章  执手风雨</li>
+				</ul></div>
+		   </div>
+		
+		   <!--图书目录end-->
+		</div>
+		<!--图书详情end-->
+	    <!--页脚-->
+	    <div class="links">
+	     <ul>
+		   <li><a href="#">Archiver</a></li>
+		   <li><a href="#">清至书屋</a></li>
+		   <li><a href="#">关于清至书屋</a></li>
+		   <li class="no-border"><a href="#">站长统计</li>
+	     </ul>
+	     <p> 版权所有：<a href='#'>清至书屋</a>　 Powered by <a href='#'>Discuz!</a> X2.5 ? 2014-2016 <a href='#'>Comsenz Inc</a>.</p>
+	    </div>	
+	 </div>
+	 <!--图书销售end-->	
+   </div>
+</body>
+</html>
